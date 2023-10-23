@@ -11,7 +11,6 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://{dbuser}:{dbpass}
     dbhost=os.environ['DBHOST'],
     dbname=os.environ['DBNAME']
 )
-
 db.init_app(app)
 app.app_context().push()
 db.create_all()
